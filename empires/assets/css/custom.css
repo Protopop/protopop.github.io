@@ -1,6 +1,0 @@
-@charset "UTF-8";
-/* CSS Document */
-
-.leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-image-layer, .leaflet-pane > svg path, .leaflet-tile-container {
-    pointer-events: auto;
-}
