@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.cheat {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	font-size:24px;
+}
+</style>
+<script type="text/javascript">
+showCards();
+setToggleText($('.oneHit'),oneHitKill);
+setToggleTextCollect($('.oneHit'),smoothCollect);
+function setToggleText(t,v){
+	var vl = 'Off';
+	
+	v==true?vl='On':vl='Off';
+	
+	$('.toggleValue').html(vl);
+	
+	
+}
+
+function setToggleTextCollect(t,v){
+	var vl = 'Off';
+	
+	v==true?vl='On':vl='Off';
+	
+	$('.toggleValueSmoothCollect').html(vl);
+	
+	
+}
+
+function toggleOneHitKill(){
+	if(oneHitKill == true){
+		oneHitKill = false;
+	} else{
+		oneHitKill = true;
+	}
+	setToggleText($('.oneHit'),oneHitKill);
+}
+
+function toggleSmoothCollect(){
+	if(smoothCollect == true){
+		smoothCollect = false;
+	} else{
+		smoothCollect = true;
+	}
+	setToggleTextCollect($('.oneHit'),smoothCollect);
+}
+
+function addDeckCard(){
+	
+	if(deckArray.length < 9){
+	deckArray.push(generateObject(currentLocation.level,'perk',1000));
+	switchDeck.call();
+	arrangeCards();
+	} else {
+		
+		popMessage("You can hold 9 cards in your hand at one time","Your hand is full");
+		
+	}
+}
+
+
+function removeDeckCard(){
+	
+	
+	deckArray.pop();
+	switchDeck.call();
+	arrangeCards();
+	
+	}
+
+function activateCheats(){
+	
+	cheatActive = true;
+	$('.messages').show();
+	$('.messages').html("Cheats Active. Save Disabled.");
+}
+
+</script>
+</head>
+
+<body>
+
+<div class="fullPageContent"> 
+<div class="fullPageTitle"> Cheats</div>
+		<a class="closeStage" onclick="hideCards();loadFullPageCards('pages/core/settings');">X</a>
+<div class="basicStage" style="overflow:none;">
+
+	
+	
+		
+				<span class="cheat" style="padding-top:0px;">Activating Cheats will disable saving the game until you reload the page. Anything done while cheats are active will not be saved.</span>
+	<table width="100%" border="0" cellspacing="10" cellpadding="0">
+		<tr>
+				<td><span class="cheat"><a href="#"  class="inspect mb" onclick="activateCheats();healingPotions +=5;playSound(healingpotion, 1);playerHp = maxHp;updateStats();limitPotions();">Add Health Potion</a></span></td>
+				<td><span class="cheat"><a href="#"  class="inspect mb" onclick="activateCheats();playerGold+=100;updateStats();playSound(coins,1);">Add Gold</a></span></td>
+				<td><span class="cheat"><a href="#"  class="inspect mb oneHit" onclick="activateCheats();toggleOneHitKill();">One Hit Kill is <span class='toggleValue'>Off</span></a></span></td>
+		</tr>
+		<tr>
+				<td><span class="cheat"><a href="#"  class="inspect mb" onclick="activateCheats();maxKarma=100;karma=maxKarma+maxKarmaBonus;updateStats();playSound(sfxStart,1);">Full  Karma</a></span></td>
+				<td><span class="cheat"><a href="#"  class="inspect mb" onclick="activateCheats();playerLevel+=1;if(playerLevel==26){playerLevel=1;};setMaxKarma();updateStats();playSound(slam, 1);">Increase Level</a></span></td>
+				<td><span class="cheat"><a href="#"  class="inspect mb oneHit" onclick="activateCheats();addDeckCard();">Add Card</a></span></td>
+		</tr>
+		<tr>
+				<td><span class="cheat"><a href="#"  class="inspect mb" onclick="activateCheats();unlimitedFlips = true;playSound(slam, 1);">Unlimited Flips</a></span></td>
+				<td><span class="cheat"><a href="#"  class="inspect mb" onclick="activateCheats();powerLevel = playerLevel;chaosDraw.call();playSound(slam, 1);">Fill Cards</a></span></td>
+					<td><span class="cheat"><a href="#"  class="inspect mb oneHit" onclick="activateCheats();removeDeckCard();">Remove Card</a></span></td>
+		</tr>
+		<tr>
+				<!--<td><span class="cheat"><a href="#"  class="inspect mb" onclick="activateCheats();travelSpeed=600;playSound(slam, 1);">Fast Travel</a></span></td>-->
+				<td><span class="cheat"><a href="#"  class="inspect mb" onclick="activateCheats();createRandomPlayer();closeStage();playSound(slam, 1);">Skip Tutorial</a></span></td>
+				<td><span class="cheat"><a href="#"  class="inspect mb" onclick="activateCheats();toggleSmoothCollect();">Smooth Collect is <span class='toggleValueSmoothCollect'>Off</span></a></td>
+		</tr>
+		
+		<tr>
+				
+				<!--<td><span class="cheat"><a href="#"  class="inspect mb" onclick="activateCheats();deadAgents = [];closeStage();playSound(slam, 1);">Resurrect All Citizens</a></span></td>-->
+		</tr>
+</table>
+				
+				
+				
+				
+				
+				
+				</div></div>
+</body>
+</html>
+

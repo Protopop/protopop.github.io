@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Nimia</title>
+
+<style type="text/css">
+.fullPageContent {
+background-image: url("assets/img/historyboard.png");
+background-repeat: no-repeat;
+background-position: center top;
+display: block;
+height: 620px;
+width: 1100px;
+position: absolute;
+right: 50%;
+margin-right: -550px;
+}
+
+/*.closeCardsButton {
+left: 460px !important;
+font-size: 24px !important;
+top: 530px !important;
+position: absolute !important;
+}*/
+#cardSet1{
+	transform: rotate(-2deg) !important;
+left: 20px !important;
+}
+#cardSet2{
+	transform: rotate(2deg) !important;
+top: 50px !important;
+}
+#cardSet3{
+	transform: rotate(-2deg) !important;
+}
+</style>
+</head>
+<body >
+<a class="closeStage" onClick="closeStage();"> X </a>
+<div class="fullPageContent"> <script type="text/javascript">
+pickOne = true;
+//fadeInPosters();
+cardsFlipped = 0;
+
+//showPerson();
+//alert(playerCareer.info.name);
+
+
+
+		
+	if(worldObject.firstHistoryBoard == false){		
+	popMessageHistoryBoard();
+	worldObject.firstHistoryBoard = true;
+	saveAll(false);
+	}
+
+</script>
+		<div class="fullPageTitle">History Board</div>
+				
+
+		<div class="historyBoard"><a href="#" onClick="greenShore.closePopup();closeDeckSafe();testVisibility(locationArray);" class="closeCardsButton" >Close</a>
+				<div class="flip" id="cardSet1"  onClick="flipIt(1);">
+						<div class="rotate y"> 
+						
+						<a href="#"><img src="assets/img/posters/death.jpg" alt="" width="330" height="460"></a>
+						
+						
+								<div class="cardSet1 "><div class='ch'></div><div class='cost'>  </div><div class='cardHeader'>The Assasina</div><div class='cardLocationImages'></div><div class='questDescription'>The Assasina is made up largely of former slaves who naturally oppose the Empyres slavery laws and call for the death of Emperoro Mortelle himself. Their clan symbol is brazenly the severed head of the Emperoro, a reminder that the Empyre is rife with instabilities that threaten to tear it apart.</div> 
+								
+								</div>
+						
+						</div>
+				</div>
+				<div  class="flip" id="cardSet2" onClick="flipIt(2);">
+						<div class="rotate y"> <a href="#"><img src="assets/img/posters/igrifriend.jpg" alt="" width="330" height="460"></a>
+								
+								<div class="cardSet2 "><div class='ch'></div><div class='cost'>  </div><div class='cardHeader'>Public Relations</div><div class='cardLocationImages'></div><div class='questDescription'>Over a decade ago the Emperoro was saved from an assasination attempt by a lone Igri adventurer. Ever grateful the Emperoro has made many overtures to the Igri community to increaingly integrate them into the culture of the Empyre.</div>
+								</div>
+						
+						</div>
+				</div>
+				<div  class="flip" id="cardSet3" onClick="flipIt(3);">
+						<div class="rotate y"> <a href="#"><img src="assets/img/posters/seceed.jpg" alt="" width="330" height="460"></a>
+								
+								<div class="cardSet3 "><div class='ch'></div><div class='cost'>  </div><div class='cardHeader'>Savar Seceeds</div><div class='cardLocationImages'></div><div class='questDescription'>The region of Savar has left the Empyre, throwing the balance of power into dissarray. With the Open Coast and Savar exiting, the Empyre has lost much of its influence. Savar has not been hard hot by the Plague, but it remains to see how ling this will last with the protection of Emperoro Mortelles ruthless anti-plague activities.</div>
+								</div>
+						
+						</div>
+				</div>
+		</div>
+</div>
+<!--<a href="#"  class='closePlain' style="margin-top:60px" onClick="greenShore.closePopup();closeFullPage();">Done</a>-->
+
+</body>
+</html>

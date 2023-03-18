@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-image-layer, .leaflet-pane > svg path, .leaflet-tile-container {
+    pointer-events: auto;
+}
+
+.continentLabel {
+color: #FFF;
+font-size: 64px;
+font-weight: 400;
+text-shadow: 0px 0px 16px #333;
+/* text-shadow: 1px 1px 1px rgb(61, 61, 61), -1px -1px 0px rgb(61, 61, 61), 1px -1px 1px rgb(0, 0, 0), -1px 1px 1px rgb(52, 52, 52), 1px 1px 1px rgb(51, 51, 51); */
+/* text-transform: uppercase; */
+	text-shadow: 1px 1px 0px rgb(70, 70, 70), -1px -1px 0px rgb(78, 77, 77), 1px -1px 0px rgb(74, 73, 73), -1px 1px 0px rgb(66, 66, 66), 1px 1px 1px rgb(65, 65, 65);
+}
+
+.countryLabel {
+color: #Fff;
+font-size: 36px;
+font-weight: 400;
+text-align: center;
+text-shadow: 1px 1px 3px #000;
+text-shadow: 0px 0px 16px #333;
+/* text-transform: uppercase; */
+white-space: pre;
+/* text-shadow: 1px 1px 0px rgb(0, 0, 0), -1px -1px 0px rgb(0, 0, 0), 1px -1px 0px rgb(0, 0, 0), -1px 1px 0px rgb(0, 0, 0), 1px 1px 1px rgb(51, 51, 51); */
+	text-shadow: 1px 1px 0px rgb(70, 70, 70), -1px -1px 0px rgb(78, 77, 77), 1px -1px 0px rgb(74, 73, 73), -1px 1px 0px rgb(66, 66, 66), 1px 1px 1px rgb(65, 65, 65);
+}
+
+.leaflet-marker-iconlabel {
+color: #FFF;
+font-size: 15px;
+margin-left: 0;
+position: absolute;
+text-align: center;
+/* text-shadow: 1px 1px 0px rgb(0, 0, 0), -1px -1px 0px rgb(0, 0, 0), 1px -1px 0px rgb(0, 0, 0), -1px 1px 0px rgb(0, 0, 0), 1px 1px 1px rgb(51, 51, 51); */
+text-shadow: 1px 1px 0px rgb(70, 70, 70), -1px -1px 0px rgb(78, 77, 77), 1px -1px 0px rgb(74, 73, 73), -1px 1px 0px rgb(66, 66, 66), 1px 1px 1px rgb(65, 65, 65);
+top: 20px!important;
+z-index: 1;
+width: 100px;
+left: -10px;
+white-space: nowrap;
+}
+
+.provinceLabel {
+color: #FFC;
+font-size: 20px;
+font-weight: 600;
+text-align: center;
+text-shadow: 1px 1px 3px #000;
+text-transform: uppercase;
+white-space: pre;
+width: 120px!important;
+display: block;
+height: 30px !important;
+margin-left: -60px !important;
+margin-top: -15px !important;
+text-shadow: 1px 1px 0px rgb(70, 70, 70), -1px -1px 0px rgb(78, 77, 77), 1px -1px 0px rgb(74, 73, 73), -1px 1px 0px rgb(66, 66, 66), 1px 1px 1px rgb(65, 65, 65);;
+}
+.regionLabel {
+/* background-image: url(../img/region.png); */
+background-position: center top;
+background-repeat: no-repeat;
+background-size: contain;
+border-radius: 4px 4px 4px 4px;
+color: #fbdd5e;
+colorx: #000;
+font-size: 22px;
+font-weight: 700;
+height: 38px!important;
+line-height: 28px;
+padding: 30px;
+padding-left: 30px;
+padding-right: 30px;
+padding-top: 15px;
+padding-top: 20px;
+padding-top: 6px;
+text-align: center;
+/* text-shadow: 1px 1px 1px #000; */
+text-shadowx: 1px 1px 1px #fff;
+xxxtext-shadow: 2px 2px 0px rgb(0, 0, 0), -2px -2px 0px rgb(0, 0, 0), 2px -2px 0px rgb(0, 0, 0), -2px 2px 0px rgb(0, 0, 0), 2px 2px 2px rgb(51, 51, 51);
+text-transform: uppercase;
+white-space: nowrap;
+width: 100px!important;
+text-shadow: 1px 1px 0px rgb(70, 70, 70), -1px -1px 0px rgb(78, 77, 77), 1px -1px 0px rgb(74, 73, 73), -1px 1px 0px rgb(66, 66, 66), 1px 1px 1px rgb(65, 65, 65);
+}
+
+html, body, #map {
+height: 100%;
+margin: 0;
+padding: 0;
+width: 100%;
+xxbackground-color: #33727a;
+overflow: hiddenx;
+position: absolute;
+	background-color: #000000;
+}
+
+.bottomBlockCity {
+display: block;
+position: absolute;
+height: auto;
+margin-left: 30px;
+width: 270px;
+top: 360px;
+line-height: 1.5;
+font-size: 16px;
+text-align: center;
+text-shadow: -1px -1px 0px #050505;
+color: #FFF;
+margin-right: 20px;
+}
+
+.bottomBlock {
+clear: both;
+display: block;
+float: left;
+font-size: 20px;
+height: auto;
+line-height: 28px;
+width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+position: absolute;
+z-index: 999;
+bottom: 60px;
+
+color: #FFF;
+text-shadow: 1px 1px 2px #000;
+padding-top: 20px;
+/* border-top: dashed 1px !important; */
+text-shadow: none;
+}
+.bigAlignment {
+position: absolute;
+color: #FFF;
+font-size: 16px;
+width: 550px;
+text-align: center;
+bottom: 40px;
+z-index: 2;
+/* border-top: 1px solid #CCC; */
+opacity: 1;
+/* border-bottom: 1px solid #CCC; */
+/* padding: 20px; */
+margin-left: auto;
+margin-right: auto;
+left: 32px;
+/* text-transform: uppercase; */
+text-shadow: none;
+text-align: left;
+}
+
+.landscape {
+height: 441px;
+left: 6px;
+overflow: hidden;
+position: absolute;
+width: 630px;
+top: 5px;
+z-index: -5;
+}
+
+
+
+
+
+.landscape {
+height: 450px;
+left: 6px;
+overflow: hidden;
+position: absolute;
+width: 630px;
+top: 5px;
+z-index: -5;
+	background-image: url(../img/cardlocation.png)!important;
+background-position: top center;
+background-repeat: no-repeat!important;
+}
+.landscape {
+height: 440px;
+left: 6px;
+overflow: hidden;
+position: absolute;
+width: 630px;
+top: 4px;
+z-index: -5;
+background-image: url(../img/cardlocation.png)!important;
+background-position: top center;
+background-repeat: no-repeat!important;
+}
+
+.landscape img{
+	opacity:.7;
+}
+
+.locationTitle {
+line-height: normal;
+color: #ffffff;
+font-size: 48px;
+ text-shadow: none;
+/*position: absolute;
+top: 20px;
+/* text-shadow: 1px 1px 0px rgb(0, 0, 0), -1px -1px 0px rgb(0, 0, 0), 1px -1px 0px rgb(0, 0, 0), -1px 1px 0px rgb(0, 0, 0), 1px 1px 1px rgb(51, 51, 51); */
+}

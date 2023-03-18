@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Nimia</title>
+</head>
+<body>
+<div class="fullPageContent"> <script type="text/javascript">
+var pickOne = true;
+spreadCards();
+cardsFlipped = 0;
+$(".load").click(function (e) { 
+			e.preventDefault();
+			var loadingBar = $('#loadingBar');
+			var content = $('.fullPageContent');
+			loadingBar.show();
+			content.html("loading");
+			$('.fullPageContent').hide();
+			content.load($(this).attr("href"), function() {
+				loadingBar.hide();
+				$('.fullPageContent').fadeIn(300, function(){
+					
+				});
+			});
+        });
+</script>
+		<div class="fullPageTitleCenter">Collect your spoils</div>
+		<div class="speech">
+		
+		<div class="flipCard" id="cardSet2">
+						
+	<div class="cardFront">
+					<a href="#" onMouseDown=drawLoot(2,beastLevel)><img src="assets/img/cards/loot.png" alt="" width="330" height="460"></a>			
+	</div>
+								
+	<div class="cardBack">
+								
+	</div>
+					
+</div>
+
+
+				
+		</div>
+</div>
+</body>
+</html>
