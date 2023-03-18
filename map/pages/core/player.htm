@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</meta>
+<title>Nimia</title>
+<style type="text/css">
+.fullPageContent .cardButton {
+	font-size: 16px;
+}
+.fullPageContent .cardTitle {
+	font-size: 24px;
+}
+
+</style>
+</head>
+<body>
+<div class="fullPageContent"> 
+		<script type="text/javascript">
+      pickOne = true;
+      cardsFlipped = 0;
+	  $('.fullPageContent .cardTitle').text(capitaliseFirstLetter(playerSpecies) +" "+capitaliseFirstLetter(playerGender)+" "+playerCareer);
+      
+       
+//$("#cardSet1 .cardFront img").attr("src","assets/img/portrait/"+playerSpecies.toLowerCase()+"/rook"+playerGender.toLowerCase()+".png");
+$("#cardSet2 .cardFront img").attr("src","assets/img/portrait/"+playerSpecies.toLowerCase()+"/"+playerCareer.toLowerCase()+playerGender.toLowerCase()+".png");
+
+//$("#cardSet3 .cardFront img").attr("src","assets/img/portrait/"+playerSpecies.toLowerCase()+"/swipe"+playerGender.toLowerCase()+".png");
+$("#cardSet2 .cardPath").attr("src","assets/img/paths/"+playerPath.toLowerCase()+".png");
+//$("#cardSet3 img").attr("src","assets/img/portrait/"+playerSpecies.toLowerCase()+"/rook"+playerGender+".png");
+
+
+// TOOLTIP FOR GUILD PANEL
+
+
+//AIguildButtons();
+
+//if(firstGender == true && firstCareer == true && firstSpecies == true && firstPath == true && playerCreated == false){
+
+
+    </script>
+		<div class="fullPageTitle"> Your Character</div>
+		
+		<div class="flipCard" id="cardSet2">
+				<div class="card cardFront smooth">
+				<a class="cardButton" onClick="closeStage();"> Continue </a> 
+				<div class="cardTitle">Niji</div> <!--<img class='cardPath' src="assets/img/paths/speed.png" width='40' height='40' />-->
+						<img src="assets/img/portrait/citizen/fritzdandy.png" width="320" height="400" class="portrait"/> 
+						</div>
+				<div class="card cardBack smooth" onClick="unflipCards();"><!-- <img class='cardClan' style="top:400px;" src="assets/img/alignment/humane.png" width='40' height='40' />-->
+						<div class="cardTitle"> Niji </div>
+						<div class="cardSubTitle"> Level 5 Wytch </div>
+						<div class="powerDisplay">
+								<div class="powerUps"> <img class="activeSkill as01" src="assets/img/blank.png" width='256' height='256' /> <img class="activeSkill as02" src="assets/img/paths/strength.png" width='80' height='80' /> <img class="activeSkill as03" src="assets/img/paths/spirit.png" width='80' height='80' /> </div>
+								<div class="powerUpsPassive"> </div>
+						</div>
+						 <img src="assets/img/portrait/citizen/fritzdandy.png" width="320" height="400" class="portrait"/> </div>
+		</div>
+	
+	
+	
+</div>
+</body>
+</html>

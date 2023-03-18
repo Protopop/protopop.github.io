@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</meta>
+<title>Nimia</title>
+<style type="text/css">
+.fullPageContent .cardSubTitle {
+	top: 140px;
+width: 280px;
+left: 25px;
+line-height: 1.5;
+font-size: 20px;
+}
+.fullPageContent .cardButton {
+	font-size: 16px;
+}
+.fullPageContent .cardBack .portrait {
+	opacity:0.4;
+}
+</style>
+</head>
+<body class="page">
+<div class="fullPageContent"> 
+		<script type="text/javascript">
+      pickOne = true;
+      cardsFlipped = 0;
+	  $('.cityNam').text(currentLocation.name.substring(0, currentLocation.name.length- 1));
+      
+	  $("#cardSet1  img").attr("src","assets/img/portrait/"+playerSpecies.toLowerCase()+"/"+playerCareer.toLowerCase()+"female.png");
+
+$("#cardSet2  img").attr("src","assets/img/portrait/"+playerSpecies.toLowerCase()+"/"+playerCareer.toLowerCase()+"androgyne.png");
+$("#cardSet3  img").attr("src","assets/img/portrait/"+playerSpecies.toLowerCase()+"/"+playerCareer.toLowerCase()+"male.png");
+
+       
+   //   $("#cardSet1 img").attr("src","assets/img/portrait/"+playerSpecies.toLowerCase()+"/rookfemale.png");
+//$("#cardSet2 img").attr("src","assets/img/portrait/"+playerSpecies.toLowerCase()+"/rookandrogyne.png");
+//$("#cardSet3 img").attr("src","assets/img/portrait/"+playerSpecies.toLowerCase()+"/rookmale.png");
+    </script>
+		<div class="fullPageTitle"> Choose a Gender</div>
+		<a class="closeStage" onClick="closeStage();"> X </a>
+		<div class="flipCard" id="cardSet1">
+				<div class="card cardFront  smooth"  onMouseDown="flipCardsPlain(1);">
+				<div class="cardTitle">Female</div>
+						<img src="assets/img/blank.png" width="320" height="400" class="portrait"/>  
+						</div>
+				<div class="card cardBack smooth" onClick="unflipCards();">  
+						<div class="cardTitle"> Female </div>
+						<div class="cardSubTitle"> Independent and resourceful, the women of Nimia carve a path through adversity usig wisdom and courage. </div>
+						
+						<img src="assets/img/portrait/citizen/merpaladine.png" width="320" height="400" class="portrait"/>   <a class="cardButton" onClick="chooseGender('female');"> I am Female </a> </div>
+		</div>
+		<div class="flipCard" id="cardSet2">
+				<div class="card cardFront smooth"  onMouseDown="flipCardsPlain(2);"> 
+				<div class="cardTitle">Androgyne</div>
+						<img src="assets/img/blank.png" width="320" height="400" class="portrait"/> 
+						</div>
+				<div class="card cardBack smooth" onClick="unflipCards();">  
+						<div class="cardTitle"> Androgyne </div>
+						<div class="cardSubTitle">Adventurous and compassionate, drawing on a history of balance and dedication to Nature. </div>
+						
+						<a class="cardButton" onClick="chooseGender('androgyne');"> I am Androgyne </a> <img src="assets/img/portrait/citizen/fritzdandy.png" width="320" height="400" class="portrait"/> </div>
+		</div>
+		<div class="flipCard" id="cardSet3">
+				<div class="card cardFront smooth"  onMouseDown="flipCardsPlain(3);">
+				<div class="cardTitle"> Male </div>
+						<img src="assets/img/blank.png" width="320" height="400" class="portrait"/> 
+						 </div>
+				<div class="card cardBack smooth" onClick="unflipCards();"> 
+						<div class="cardTitle">Male</div>
+						<div class="cardSubTitle">Strong emotion fules Nimian men, aided by bravery and deep curiosity for the world around them.</div>
+						
+						<a class="cardButton" onClick="chooseGender('male');"> I am Male </a> <img src="assets/img/beasts/frostdaemon.png" width="320" height="400" class="portrait"/> </div>
+		</div>
+		
+</div>
+</body>
+</html>

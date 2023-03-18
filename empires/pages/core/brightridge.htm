@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.cheat {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	font-size:24px;
+}
+.inspect {
+	width:300px;
+}
+.halfBox {
+	float: left;
+	width: 45%;
+	margin-left: 20px;
+	display: block;
+	height: 100px;
+	position: relative;
+}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+function toggleMute(){
+		if(playMusic==true){
+			
+			playMusic=false;
+			setMusicText();
+			
+		} else {
+			
+			playMusic=true;
+			setMusicText();
+			playCurrentSoundtrack();
+			
+		}
+}
+
+function setMusicText(){
+if(playMusic==true){
+			$(".muteText").text("Music On");} else {
+				
+			$(".muteText").text("Music Off");	
+			}
+}
+setMusicText();
+
+function newsletter(){
+	$('.stage').load('http://protopop.us5.list-manage.com/subscribe?u=a6cb74f041588cfd0266fb708&id=34e600e5b0', function() {
+		// openFullPageCards();
+		openStage();
+
+	});
+	
+}
+hideCards();
+stopSoundtracks();
+
+$('.healIcon').hide();
+$('.iconStats').hide();
+		</script>
+<div class="fullPageContent"> 
+<div class="fullPageTitle" style="font-size:16px;">Nimian Legends : BrightRidge</div>
+		<a class="closeStage" onclick="$('.iconStats').show();$('.healIcon').show();$('.stage').html('');if(playMusic==true){playCurrentSoundtrack();};closeStage()"> X </a>
+<div class="basicStage">
+<div class="promoText" style="text-align: center;
+position: absolute;
+top: 10px;
+width: 880px;">Explore an open world fantasy wilderness. Run, fly, swim anywhere!
+
+</div>
+	
+	<div class="vid" style="clear:both;display:block;height:460px;width:880px;">
+		<div class="promoVideo"> </div>
+</div>
+<script type="text/javascript">
+$('.promoVideo').html("");
+	$('.promoVideo').html("<iframe width='880' height='400' src='https://www.youtube.com/embed/mutLRh4GSC4?autoplay=1&rel=0' frameborder='0' allowfullscreen style='pointer-events:auto;'></iframe>");
+	
+</script>
+<!--$('#mask2').show();-->
+
+
+		
+		<a href="https://itunes.apple.com/ca/app/nimian-legends-brightridge/id885657108?mt=8" target="_blank"><img width="100" height="100" style="width: 200px;
+bottom: -10px;
+position: absolute;z-index:128;
+left: 380px;" src="assets/img/apple-appstore-badge.svg"></img></a>
+
+</div>
+				
+				
+				
+</div></div>
+</body>
+</html>
+

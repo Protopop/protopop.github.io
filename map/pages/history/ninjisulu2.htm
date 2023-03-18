@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Nimia</title>
+
+<style type="text/css">
+.fullPageContent {
+background-image: url("assets/img/historyboard.png");
+background-repeat: no-repeat;
+background-position: center top;
+display: block;
+height: 620px;
+width: 1100px;
+position: absolute;
+right: 50%;
+margin-right: -550px;
+}
+
+/*.closeCardsButton {
+left: 460px !important;
+font-size: 24px !important;
+top: 530px !important;
+position: absolute !important;
+}*/
+#cardSet1{
+	transform: rotate(-2deg) !important;
+	-webkit-transform: rotate(-2deg) !important;
+left: 20px !important;
+}
+#cardSet2{
+	transform: rotate(2deg) !important;
+	-webkit-transform: rotate(2deg) !important;
+top: 50px !important;
+}
+#cardSet3{
+	transform: rotate(-2deg) !important;
+	-webkit-transform: rotate(-2deg) !important;
+}
+</style>
+</head>
+<body >
+<a class="closeStage" onClick="closeStage();"> X </a>
+<div class="fullPageContent"> <script type="text/javascript">
+pickOne = true;
+//fadeInPosters();
+cardsFlipped = 0;
+
+//showPerson();
+//alert(playerCareer.info.name);
+
+
+
+		
+	if(worldObject.firstHistoryBoard == false){		
+	popMessageHistoryBoard();
+	worldObject.firstHistoryBoard = true;
+	saveAll(false);
+	}
+
+</script>
+		<div class="fullPageTitle">History Board</div>
+				
+
+		<div class="historyBoard"><a href="#" onClick="greenShore.closePopup();closeDeckSafe();testVisibility(locationArray);" class="closeCardsButton" >Close</a>
+				<div class="flip" id="cardSet1"  onClick="flipIt(1);">
+						<div class="rotate y"> 
+						
+						<a href="#"><img src="assets/img/posters/fauvette.jpg" alt="" width="330" height="460"></a>
+						
+						
+								<div class="cardSet1 "><div class='ch'></div><div class='cost'>  </div><div class='cardHeader'>Karma Upgrade</div><div class='cardLocationImages'></div><div class='questDescription'>Fauvette is a disciplined teacher of Karmic ways. Visit him in the village of Hivre and for a price, he will train you and increase you maximum Karma.You can travel further without resting and cast more spells more frequently.</div> 
+								
+								</div>
+						
+						</div>
+				</div>
+				<div  class="flip" id="cardSet2" onClick="flipIt(2);">
+						<div class="rotate y"> <a href="#"><img src="assets/img/posters/empyre.jpg" alt="" width="330" height="460"></a>
+								
+								<div class="cardSet2 "><div class='ch'></div><div class='cost'>  </div><div class='cardHeader'>Get Equipped</div><div class='cardLocationImages'></div><div class='questDescription'>With the Empyre fracturing, three figures have emerged for control. The experienced current Emperoro Mortelle in Physsus. The thoughtful but naif Empra Suvika in Tiviscus. And the hardened, intelligent Cardino Ovo in Baevet.</div>
+								</div>
+						
+						</div>
+				</div>
+				<div  class="flip" id="cardSet3" onClick="flipIt(3);">
+						<div class="rotate y"> <a href="#"><img src="assets/img/posters/redmantle.jpg" alt="" width="330" height="460"></a>
+								
+								<div class="cardSet3 "><div class='ch'></div><div class='cost'>  </div><div class='cardHeader'>Health Upgrade</div><div class='cardLocationImages'></div><div class='questDescription'>Some beasts can kill weaker heros with one hit. This is when you need to see Red Mantle in the village of Bejra. For a price he will train you in strength, and you'll be rewarded with an increased health amount that will help you survive your next battle.</div>
+								</div>
+						
+						</div>
+				</div>
+		</div>
+</div>
+<!--<a href="#"  class='closePlain' style="margin-top:60px" onClick="greenShore.closePopup();closeFullPage();">Done</a>-->
+
+</body>
+</html>

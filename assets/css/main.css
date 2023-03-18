@@ -1,0 +1,455 @@
+@charset "UTF-8";
+
+/*@font-face {font-family: 'RumbleBraveRough';src: url('webfonts/35B023_6_0.eot');src: url('webfonts/35B023_6_0.eot?#iefix') format('embedded-opentype'),url('webfonts/35B023_6_0.woff2') format('woff2'),url('webfonts/35B023_6_0.woff') format('woff'),url('webfonts/35B023_6_0.ttf') format('truetype');}
+
+@font-face {font-family: 'QuadratSerial';src: url('webfonts/35B03E_0_0.eot');src: url('webfonts/35B03E_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/35B03E_0_0.woff2') format('woff2'),url('webfonts/35B03E_0_0.woff') format('woff'),url('webfonts/35B03E_0_0.ttf') format('truetype');}*/
+
+*{
+	  box-sizing: border-box;
+	
+}
+
+.nav {
+font-family: 'QuadratSerial';	
+	
+}
+
+.global-nav {
+xxbackground-image: url(../img/omnipedia-header.png);
+background-repeat: repeat-x;
+background-position: left top;
+position: relative;
+min-height: 60px;
+	
+}
+
+.nav-container {
+max-width: 1120px;
+margin: auto;
+    margin-bottom: auto;
+color: #2a3947;
+xxborder-bottom: solid 1px #333;
+margin-bottom: 3em;
+position: relative;
+
+	
+	
+}
+.xxxpage-title {
+	font-size: 3em;
+display: block;
+text-decoration: none;
+min-height: 3em;
+line-height: 3em;
+color: #37424a;
+
+	
+}
+
+
+
+body {
+	background-image: url(../img/paper-tile.jpg);
+	background-repeat: repeat;
+	background-position: left top;
+	margin:0;
+	padding:0;
+}
+
+
+
+
+.row {
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+
+max-width: 1170px;
+margin: auto;
+
+ 
+}
+
+.card-box {
+float: left;
+margin: auto;
+background-image: url(../img/card_back.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+position: relative;
+overflow: hidden;
+
+font-size: .8em;
+
+margin-bottom: 20%;
+margin-bottom: 32px;
+height: 336px;
+width: 240px;
+
+
+
+
+
+
+}
+
+.nav-options {
+position: absolute;
+right: 0;
+top: 64px;
+	
+	
+}
+
+.full .card-box{
+	
+	width: 480px;
+width: 540px;
+    background-size: cover;
+background-image:none;
+	
+}
+
+.big .card-box {
+height: 470px;
+width: 335px;
+}
+
+
+
+.nimian-title {
+position: absolute;
+width: 100%;
+text-align: center;
+margin: auto;
+font-family: 'QuadratSerial';
+color: #ffffff;
+opacity: .4;
+font-weight: 300;
+top: 4%;
+font-size: .72em;
+  -webkit-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition:         all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);	
+	
+}
+
+.gradient-cover {
+	
+background-image: url(../img/gradient.png);
+background-size: contain;
+position: absolute;
+bottom: 0;
+height: 40%;
+width: 100%;
+z-index: 1;
+background-position: bottom center;
+opacity:.4;
+
+
+	
+}
+
+
+.card-title,.card-flavor, .card-skill {
+position: absolute;
+width: 100%;
+text-align: center;
+margin: auto;
+ font-family: 'RumbleBraveRough';	
+ z-index: 2;
+	
+}
+.plain .card-health,.plain .card-damage, .plain .card-level {
+opacity:0;	
+
+   
+
+	
+}
+.big .card-health,.big .card-damage, .big .card-level {
+ font-size: 2em;
+    line-height: 2;
+	
+	}
+	
+	
+.big	.nimian-title {
+   
+    font-size: 1.2em;
+
+
+	}
+
+.card-title {
+color: #eeefea;
+font-size: 2.2em;
+
+bottom: 18%;	
+}
+
+.big .card-title {
+font-size: 3em;	
+}
+
+.big .card-flavor {
+    color: #bcdfe8;
+    font-size: 1.5em;
+    bottom: 13%;
+}
+
+
+.card-flavor {
+color: #bcdfe8;
+font-size: 1.1em;
+bottom: 13%;
+	
+}
+
+.card-skill {
+color: #949ca2;
+font-size: .8em;
+bottom: 3%;
+
+}
+
+
+.card-health{
+
+top: 4%;
+left: 3%;
+background-image: url(../img/ui-damage.png);
+
+}
+
+.card-level{
+
+top: 4%;
+right: 0;
+background-image: url(../img/ui-level.png);
+}
+
+.card-damage{
+
+top: 16%;
+left: 3%;
+background-image: url(../img/ui-health.png);
+
+	
+}
+
+.card-health,.card-damage, .card-level {
+	font-family: 'QuadratSerial';
+position: absolute;
+width: 15%;
+color: #ffffff;
+text-align: center;
+font-size: 1.5em;
+line-height: 1.8;
+height: 11%;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+opacity:1;
+display:none !important;
+  -webkit-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition:         all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+
+
+.thumbImage img{
+
+width: auto;
+
+}
+
+.thumbImage{
+margin-top: 20%;
+background-image: url(../img/card_back.png);
+background-position: center top;
+width: 100%;
+position: absolute;
+height: 80%;
+background-repeat: no-repeat;
+background-size: contain;
+
+
+
+}
+
+
+.basic .thumbImage{
+	position:relative;
+	
+}
+
+
+.plain .card-title {
+	
+	color: #1d2d33;
+	font-size: 2.2em;
+bottom: -10%;
+
+
+}
+
+.plain .card-border {
+	xxopacity:0;
+	xxbackground-position:center 500px;
+}
+
+
+.plain .card-flavor {
+	
+	color: #1d2d33;
+	
+bottom: -15%;
+
+
+}
+
+.plain .card-box {
+	
+	overflow: visible;
+	xxborder:none;
+	xbackground-image:none;
+	background-position:center 500px;
+}
+
+.plain .gradient-cover, .plain .card-skill {
+	xxdisplay:none;
+	opacity : 0;
+	
+}
+
+.plain .thumbImage {
+    margin-top: 20%;
+   
+    height: 83%;
+
+}
+
+.view-options{
+	text-decoration: none;
+color: #4c7279;
+margin-right: 1em;
+border: solid 1px #aaa;
+padding: .5em 2em .5em 2em;
+border-radius: 3px;
+
+
+
+
+	
+}
+
+.view-options.active{
+background-color: #ffcc00;
+border-color: #ffcc00;
+color: #ffffff;
+
+	
+}
+
+.basic .thumbImage img {
+    width: 100%;
+    height: auto;
+}
+
+.basic .thumbImage {
+	background-image:none;
+	
+}
+
+
+
+
+.smooth {
+  -webkit-transition: all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition:         all 600ms cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+  
+  
+  
+  
+  
+ .force-stretch .thumbImage {
+    margin-top: 0;
+    height: 100%;
+ }
+ 
+  
+  
+ .full .card-flavor {
+    
+    font-size: 1.5em;
+   
+}
+
+ .full .card-title {
+    
+    font-size: 3em;
+   
+}
+ 
+ .tall .thumbImage {
+
+    height: 100%;
+ }
+
+  
+  
+  
+  
+  
+   /* Dropdown Button */
+.nav .dropbtn2 {
+   
+ cursor: pointer;
+text-decoration: none;
+background-color: #4c7279;
+color: #ffffff;
+border-color: #4c7279;
+
+}
+
+/* Dropdown button on hover & focus */
+.nav .dropbtn2:hover, .dropbtn2:focus {
+    ccbackground-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.nav .dropdown2 {
+    position: relative;
+    display: inline-block;
+	z-index: 16;
+	
+}
+
+/* Dropdown Content (Hidden by Default) */
+.nav .dropdown-content2 {
+  display: none;
+position: absolute;
+background-color: #f4f6f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+border: solid 1px #ccc;
+border-radius: 3px;
+top: 2em;
+
+}
+
+/* Links inside the dropdown */
+.nav .dropdown-content2 a {
+    color: #4c7279;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.nav .dropdown-content2 a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.nav .show {display:block;} 

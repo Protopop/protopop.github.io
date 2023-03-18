@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.cheat {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	font-size:24px;
+}
+</style>
+<script type="text/javascript">
+
+setToggleText($('.oneHit'),oneHitKill);
+
+function setToggleText(t,v){
+	var vl = 'Off';
+	
+	v==true?vl='On':vl='Off';
+	
+	$('.toggleValue').html(vl);
+	
+	
+}
+
+function toggleOneHitKill(){
+	if(oneHitKill == true){
+		oneHitKill = false;
+	} else{
+		oneHitKill = true;
+	}
+	setToggleText($('.oneHit'),oneHitKill);
+}
+
+function addDeckCard(){
+	
+	if(deckArray.length < 9){
+	deckArray.push(generateObject(currentLocation.level,'perk',1000));
+	switchDeck.call();
+	arrangeCards();
+	} else {
+		
+		popMessage("You can hold 9 cards in your hand at one time","Your hand is full");
+		
+	}
+}
+
+
+function removeDeckCard(){
+	
+	
+	deckArray.pop();
+	switchDeck.call();
+	arrangeCards();
+	
+	}
+
+</script>
+</head>
+
+<body>
+
+<div class="fullPageContent"> 
+<div class="fullPageTitle"> Ui</div>
+		<a class="closeStage" onclick="loadFullPageCards('pages/core/settings');">X</a>
+<div class="basicStage" style="overflow:none;">
+
+	
+	
+		
+				<span class="cheat" style="padding-top:0px;"> </span>
+	<table width="100%" border="0" cellspacing="10" cellpadding="0">
+		<tr>
+				
+				<td><span class="cheat"><a href="#"  class="inspect mb oneHit" onclick="clickCardToView();">Click Card to View</a></span></td>
+		</tr>
+		<tr>
+				<td><span class="cheat"><a href="#"  class="inspect mb oneHit" onclick="mouseOverCardToView();">Mouseover Card to View</a></span></td>
+		</tr>
+		<tr>
+				<td><span class="cheat"><a href="#"  class="inspect mb oneHit" onclick="dragCards();">Drag Cards</a></span></td>
+		</tr>
+		
+		
+</table>
+				
+				
+				
+				
+				
+				
+				</div></div>
+</body>
+</html>
+

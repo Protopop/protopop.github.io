@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.counter {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	left: 50%;
+	top: 50%;
+	margin-left: -50px;
+	margin-top: -50px;
+	z-index: -100;
+}
+
+
+.alignmentGrid {
+	position: absolute;
+	z-index: 120;
+	height: 300px;
+	width: 560px;
+	/* [disabled]left: 20px; */
+	top: 0px;
+	background-image: url(assets/img/alignment_bg.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+#churchMessage {
+	position:absolute;
+	width:520px;
+	height:100px;
+	z-index:10000;
+	/* [disabled]background-color: #FFF; */
+	margin-top: 130px;
+	/* [disabled]margin-left: -150px; */
+	left: 0px;
+	top: 50%;
+	padding: 20px;
+	text-align: center;
+	display: none;
+	font-size: 18px;
+	/* [disabled]background-image: url(../assets/img/churchmessage.png); */
+	/* [disabled]background-repeat: no-repeat; */
+	/* [disabled]background-position: center center; */
+	color: #FFF;
+}
+
+.pAlignment {
+	font-size: 18px;
+	display: block;
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	text-transform: uppercase;
+	color: #000;
+	text-shadow: 1px 1px 1px #fff;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: dotted;
+	border-bottom-style: dotted;
+	border-top-color: #333;
+	border-right-color: #333;
+	border-bottom-color: #333;
+	border-left-color: #333;
+}
+
+.pMessage {
+    font-size: 16px;
+    display: block;
+    height: auto;
+    clear: both;
+    color: rgb(0, 0, 0);
+    line-height: normal;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.pEffect {
+	font-size: 18px;
+	/* [disabled]color: #F00; */
+	display: block;
+	text-transform: uppercase;
+	text-shadow: -1px -1px 1px #000;
+	clear: both;
+}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+	$(function(){
+		$(".load").click(function (e) { 
+			e.preventDefault();
+			var loadingBar = $('#loadingBar');
+			var content = $('.wrap');
+			loadingBar.show();
+			content.html("loading");
+			content.load($(this).attr("href"), function() {
+				loadingBar.hide();
+			});
+        });
+	
+		if(playerChaos > 200){playerChaos=200;}
+		if(playerChaos < -200){playerChaos=-200;}
+		if(playerEvil > 100){playerEvil=100;}
+		if(playerEvil < -100){playerEvil=-100;}
+		
+		//$('.counter').css({"left":law});
+		//$('.counter').css({"left":law});
+		calculateAlignment();
+		var message;
+		var effect;
+		$('.counter').delay(50).animate({
+			'margin-left': (playerChaos-50)+"px",
+			'margin-top': (playerEvil-50)+"px",
+			}, 1600,
+    function() { // the callback
+	$('.pAlignment').text("You are "+playerAlignment);
+	churchMessage();
+	
+	
+	
+      
+	  
+	  
+	  
+	    
+    }
+);
+    });
+	
+	function churchMessage(){
+		
+	//alert(playerEvil);
+		if(playerEvil<-50){
+		//good
+		//alert("good");
+		//alert(playerChaos);
+			if(playerChaos<-100){
+				// Law
+				//playerAlignment = "Noble";
+				message="A strict believer in the touch of good. Welcome brother";
+				effect="Health full, Karma +10";
+				playerHp = maxHp + maxHpBonus;
+				karma +=10;
+				
+			} else if(playerChaos>100){
+				// choas
+				//playerAlignment = "Rebel";
+				message="At least you have kindness in your random heart. Our blessing to you.";
+				effect="Health +10, Karma - 10";
+				playerHp +=10;
+				limitHp();
+				karma -=10;
+				if(playerHp>maxHp + maxHpBonus){playerHp= maxHp + maxHpBonus;}
+				
+				
+			} else {
+				//alert("neutral");
+				//neutral
+				//playerAlignment = "Humane";
+				message="Although you stray you run close to our beliefs. Have a stricter hand brother";
+				effect="Health +10";
+				playerHp +=10;
+				limitHp();
+				
+				if(playerHp>maxHp + maxHpBonus){playerHp= maxHp + maxHpBonus;}
+				
+			}
+		
+	} else if(playerEvil>50){
+		//evil
+			if(playerChaos<-100){
+				// Law
+				//playerAlignment = "Imperial";
+				message="You are lawful but misguided. Repent and find your way";
+				effect="Health -10, Karma+10";
+				playerHp -=10;
+				karma +=10;
+				if(playerHp<1){playerHp= 1;}
+				
+				
+			} else if(playerChaos>100){
+				// choas
+				//playerAlignment = "Bloodthirsty";
+				message="Yours is the foulest kind of Evil. Be gone until you change your ways";
+				effect="Health -10, Karma -10";
+				playerHp -=10;
+				karma -=10;
+				if(playerHp<1){playerHp= 1;}
+				
+				
+			} else {
+				//neutral
+				//playerAlignment = "Coldblooded";
+				message="Evil has No place in Ven Abbey. Be gone";
+				effect="Health -10";
+				playerHp -=10;
+				if(playerHp<1){playerHp= 1;}
+				
+			}
+		
+	} else {
+		//neutral
+		if(playerChaos<-100){
+			// Law
+			//playerAlignment = "Honorable";
+			message="Your kind heart strays but your strict nature earns our blessing";
+			
+			effect="Karma +10";
+			karma +=10;
+			
+			
+			
+		} else if(playerChaos>100){
+			// chaos
+			//playerAlignment = "Anarchic";
+			message="Anarchy destroys law. Repent your chaotic ways";
+			effect="Karma -10";
+			karma -=10;
+			
+		} else {
+			//neutral
+			//playerAlignment = "Neutral";
+			message="You have yet to choose a path. Go forth and find your way.";
+			effect="No Effect";
+			
+			
+		}
+		
+		//alert(message);
+	}
+	
+	
+			
+			
+			$('.pMessage').html(message);
+			$('.pEffect').html(effect);
+			$('#churchMessage').fadeIn(400);
+		
+	}
+</script>
+
+<div class="pages">
+<div style=" width: 560px; height: 300px; margin-left:20px; display: block;position:relative;"><div class="counter"><img src="assets/img/karmaicon.png" width="100" height="100" /></div>
+		<div class="alignmentGrid">
+				
+		</div><div id="churchMessage"> <span class="pAlignment">You are</span><span class="pMessage">message</span><span class="pEffect">message</span></div>
+</div>
+</div>
+</body>
+</html>

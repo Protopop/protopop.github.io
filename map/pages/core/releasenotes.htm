@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.cheat {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	font-size:24px;
+}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+var versionText = version.toString(); 
+$('.version').html('Version '+versionText.charAt(0)+'.'+versionText.charAt(1)+'.'+versionText.charAt(2));
+function toggleMute(){
+		if(playMusic==true){
+			
+			playMusic=false;
+			setMusicText();
+			
+		} else {
+			
+			playMusic=true;
+			setMusicText();
+			playCurrentSoundtrack();
+			
+		}
+}
+
+function setMusicText(){
+if(playMusic==true){
+			$(".muteText").text("Music On");} else {
+				
+			$(".muteText").text("Music Off");	
+			}
+}
+setMusicText();
+		</script>
+<div class="fullPageContent"> 
+<div class="fullPageTitle">Release Notes</div>
+		<a class="closeStage" onclick="loadFullPageCards('pages/core/settings');"> X </a>
+<div class="basicStage" style="overflow:scroll;overflow-x: hidden;">
+
+	
+		<div class="updateContent">
+		
+		<h2>1.0.6</h2>
+		<ul>
+				
+				<li>Reduced game size from 60mb to 52mb</li>
+				<li>Optimized / compressed all images for faster load time</li>
+				<li>Removed redundant / unused assets</li>
+				<li>Hero stats UI panel is now draggable</li>
+				<li>New beast: Mad Vermin</li>
+				<li>Instead of "Accept quest" quest buttons now says current quest objective</li>
+				<li>Loading optimizations - loads only essential assets at start, defers the rest</li>
+				<li>Preload reduced from 238 requests/12mb to 139 requests / 2mb</li>
+				
+		</ul>
+		
+		<h2>1.0.5</h2>
+		<ul>
+				
+				<li>Fix Traveling bug that would sometimes freeze character</li>
+				<li>New loading screen and process</li>
+				<li>Mixed bug fixes</li>
+				<li>Mixed interface fixes</li>
+				
+		</ul>
+		
+		
+		<h2>1.0.2</h2>
+		<ul>
+				
+				<li>Added Omnipedia / Encyclopedia content to sidebar. Open by clicking LORE button on right side of screen</li>
+				
+		</ul>
+		
+		<h2>1.0.1</h2>
+		<ul>
+				
+				<li>New Beasts: Saphire and Ruby Grindylo</li>
+				<li>New process to handle game updates + expansions</li>
+				<li>Smooth Collect card animation toggle in options - auto collect cards or manually collect</li>
+				<li>UI: Smaller Card value icons</li>
+				<li>UI: Quest map popups now have image of target instead of just text</li>
+				<li>UI: Larger tool tip X close button</li>
+		</ul>
+		
+		
+<h2>1.0.0</h2>
+		<ul>
+				
+				<li>Nimian Legends is now Nimian Legends Empires</li>
+				<li>AdventureGen Engine™ 1.0 - Procedural generation for Quests, Citizens, Items, Dialogue and Locations</li>
+				<li>Card based collection system</li>
+				<li>Quest sytem based on Social Causes and earning votes</li>
+				<li>All Southern Nimia now explorable: Added Eldt, Rska and The Open Coast</li>
+				<li>New citizens</li>
+		</ul>
+
+<h2>0.3.7</h2>
+		<ul>
+				<li> IOS 7.1 new Minimal UI provides more screen space for the game</li>
+				<li>IOS 7.1 new Landscape game mode</li>
+				<li>IOS 7.1 Spinning cards no longer clip/intersect with cards below</li>
+				<li>IOS 7.1 Spinning cards in landscape mode don't enlarge (not needed in landcape)</li>
+				<li>iPad Mini non-retina fix</li>
+				<li>New Tiviscus Region Descriptions for <a href='#' onclick='undermire.openPopup();'>Undermire</a>, <a href='#' onclick='silverwood.openPopup();'>Silverwood</a>, <a href='#' onclick='doonBarrens.openPopup();'>Doon Barrens</a>, <a href='#' onclick='humblePlains.openPopup();'>Humble Plains</a>, <a href='#' onclick='eastuary.openPopup();'>Eastuary</a> and <a href='#' onclick='daemonsPass.openPopup();'>Daemons Pass</a></li>
+				<li>Reduced page count from 127 to 101 - replaced multiple store pages to single template</li>
+				<li>New City Shop Format - 3 items per store with larger images</li>
+				<li>INTERFACE Amount of Gold can now be seen in store while shopping</li>
+				<li>FIXED Chrome backface on flipped cards was showing in reverse</li>
+				<li>NEW What's New section to promote new adventures and expansions</li>
+				<li>FIXED Cards now resize correctly on rotation from portrait to landscape on mobile</li>
+				<li>FIXED Landscape Mobile page height now auto scrolls to top to eliminate extra padding</li>
+				<li>UI added double-tap to zoom tutorial for mobile</li>
+				<li>UI added Zoom Out button for mobile</li>
+				<li>Fixed options sidebar in landscape mode so it fits onscreen</li>
+				<li>Runecrackers can now be activated at Dungeon Doors to simplify puzzles (at the expense of gold reward)</li>
+				<li>Solving Dungeon Door puzzles now gives gold reward</li>
+		</ul>
+		<h2>0.3.6</h2>
+		<ul>
+				<li> iPhone interface enhancements </li>
+				<li> iPhone - Flipped cards enlarge for improved readability </li>
+		</ul>
+		<h2>0.3.5</h2>
+		<ul>
+				<li> NEW iPhone Compatibility </li>
+				<li> iPad and Retina Display upgrades </li>
+				<li> Nimian Battles Media (3D Expansion) </li>
+				<li> NEW Invincibility Cheat</li>
+				<li> Bug fixes and Optimizations </li>
+		</ul>
+		<h2>0.3.4</h2>
+		<ul>
+				<li> NEW Options Sidebar groups all options in one place </li>
+				<li> user interface enhancements and bug fixes </li>
+				<li> facebook and Chrome store integration </li>
+				<li> Hall of Honor with special credits </li>
+				<li> Smaller app size - From 58mb to 37mb </li>
+				<li> Removed OGG files now that Firefox supports MP3 </li>
+				<li> NEW Import Save mechanism to convert old beta saves </li>
+				<li> Improved Internet Explorer compatibility (Still no SFX) </li>
+		</ul>
+		<h2>0.3.3</h2>
+		<ul>
+				<li> New Shield spells add tactical element to magic combat </li>
+				<li> Zea Region unlocked </li>
+				<li> New Creatures - Frost Daemon, Frost Gargunt </li>
+				<li> New Expert Career  - Wytch, Wytch Hunter, Smuggler </li>
+		</ul>
+		<h2>0.3.2</h2>
+		<ul>
+				<li> Replaced Uservoice Feedback Tab with Dedicated Forum tab </li>
+				<li> Cosmetic changes </li>
+		</ul>
+		<h2>v.0.3.1</h2>
+		<ul>
+				<li> New Shield spells add tactical element to magic combat </li>
+				<li> Zea Region unlocked </li>
+				<li> New Creatures - Frost Daemon, Frost Gargunt </li>
+				<li> New Expert Career  - Wytch, Wytch Hunter, Smuggler </li>
+		</ul>
+		<h2>0.3.0 </h2>
+		<ul>
+				<li> First Playable Build - open for testing </li>
+		</ul>
+		<h2>0.2.9 </h2>
+		<ul>
+				<li> New adventure - 'The Wytch of Koldemarsh' </li>
+				<li> New feature - History boards provode flavor text and history for surrounding regions </li>
+		</ul>
+		<h2>0.2.8 </h2>
+		<ul>
+				<li> Updated Dialogue engine - customizable speech trees and character portraits </li>
+				<li> Updated 'Old Scroll' interface </li>
+		</ul>
+		
+		
+				</div>
+				
+				</div></div>
+</body>
+</html>
+

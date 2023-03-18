@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+.cheat {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	font-size:24px;
+}
+</style>
+</head>
+
+<body>
+<script type="text/javascript">
+var versionText = version.toString(); 
+$('.version').html('Version '+versionText.charAt(0)+'.'+versionText.charAt(1)+'.'+versionText.charAt(2));
+function toggleMute(){
+		if(playMusic==true){
+			
+			playMusic=false;
+			setMusicText();
+			
+		} else {
+			
+			playMusic=true;
+			setMusicText();
+			playCurrentSoundtrack();
+			
+		}
+}
+
+function setMusicText(){
+if(playMusic==true){
+			$(".muteText").text("Music On");} else {
+				
+			$(".muteText").text("Music Off");	
+			}
+}
+setMusicText();
+		</script>
+<div class="fullPageContent"> 
+<div class="fullPageTitle">About Nimian Legends</div>
+		<a class="closeStage" onclick="loadFullPageCards('pages/core/settings');"> X </a>
+<div class="basicStage">
+
+	
+		<div class="updateContent">
+<h2>What's Nimian Legends?</h2>
+				Nimian Legends is the fantasy setting for Nimian games and is created by <a href="http://protopop.com/contact/index.htm" target="_blank">Robert Kabwe</a>. It's a labor of love, created in my spare time to bring the world of Nimian Legends to life. Since I was a kid playing Dungeons & Dragons I've loved creating worlds and maps. 
+				<h2>If you like this game or have found it useful, lend your support</h2>
+				You can support me and help me make more games to share by spreading the word to your friends and family on facebook, by email, or anyway you like. Thank You.</br>
+				</br>
+				Want to support me and see more? <a href="https://itunes.apple.com/ca/app/nimian-legends-brightridge/id885657108?mt=8" target="_blank" style="text-decoration:underline;">Buying my Open World Wilderness app BRIGHTRIDGE will help!</a>				
+
+
+
+				<h2>More Games</h2>
+				Play more games at <a href="http://protopop.com" target="_blank">Protopop.com</a>
+				<a href="#" onclick="loadFullPageCards('pages/core/releasenotes');"class="version">Version</a>
+				</div>
+				
+				</div></div>
+</body>
+</html>
+

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</meta>
+<title>Nimia</title>
+<style type="text/css">
+.fullPageContent .cardSubTitle {
+	top: 60px;
+width: 280px;
+left: 25px;
+line-height: 1.5;
+font-size: 20px;
+}
+.fullPageContent .cardButton {
+	font-size: 16px;
+}
+.fullPageContent .cardBack .portrait {
+	opacity:0.4;
+}
+</style>
+</head>
+<body>
+<div class="fullPageContent"> 
+		<script type="text/javascript">
+      pickOne = true;
+      cardsFlipped = 0;
+	  $('.cityNam').text(currentLocation.name.substring(0, currentLocation.name.length- 1));
+
+
+
+fillPathCard(1,'spirit','cardBack');
+fillPathCard(2,'speed','cardBack');
+fillPathCard(3,'strength','cardBack');
+
+
+				
+				
+				
+				
+    </script>
+		<div class="fullPageTitle">Choose a Path</div>
+		<a class="closeStage" onClick="closeStage();"> X </a>
+		<div class="flipCard" id="cardSet1">
+				<div class="card cardFront smooth" onMouseDown="flipCardsPlain(1);">
+							<div class="cardTitle"> Spirit </div>
+							<img class="portrait" height="400" src="assets/img/paths/spiritportrait.png" width="320" /> </div>
+							
+			<div class="card cardBack smooth" onClick="unflipCards();"> 
+					<div class='cardTitle'></div>
+					<img src='' width='200' height='200' style='position:absolute;top: 140px;left: 64px;'/>
+					<div class='cardSubTitle'></div>
+<!--					<div class="cardSubText"></div>
+				<div class='cardStat'></div>  -->	
+					<div class="cardButtonContainer"></div> 
+				</div>
+				
+		</div>
+		
+		
+		
+		
+		
+		
+		<div class="flipCard" id="cardSet2">
+				<div class="card cardFront smooth" onMouseDown="flipCardsPlain(2);">
+							<div class="cardTitle"> Speed </div>
+							<img class="portrait" height="400" src="assets/img/paths/speedportrait.png" width="320"> </div>
+						
+				<div class="card cardBack smooth" onClick="unflipCards();"> 
+					<div class='cardTitle'></div>
+					<img src='' width='200' height='200' style='position:absolute;top: 140px;left: 64px;'/>
+					<div class='cardSubTitle'></div>
+<!--					<div class="cardSubText"></div>
+				<div class='cardStat'></div>  -->	
+					<div class="cardButtonContainer"></div> 
+				</div>
+	
+						
+				
+		
+		</div>
+		
+		
+		
+		
+		
+		
+		<div class="flipCard" id="cardSet3">
+				<div class="card cardFront smooth" onMouseDown="flipCardsPlain(3);">
+							<div class="cardTitle"> Strength </div>
+							<img class="portrait" height="400" src="assets/img/paths/strengthportrait.png" width="320"> </div>
+						 
+				<div class="card cardBack smooth" onClick="unflipCards();"> 
+					<div class='cardTitle'></div>
+					<img src='' width='200' height='200' style='position:absolute;top: 140px;left: 64px;'/>
+					<div class='cardSubTitle'></div>
+				<!--	<div class="cardSubText"></div>
+					<div class='cardStat'></div>  -->
+					<div class="cardButtonContainer"></div> 
+				</div>
+		</div>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Nimia</title>
+
+<style type="text/css">
+.fullPageContent {
+background-image: url("assets/img/historyboard.png");
+background-repeat: no-repeat;
+background-position: center top;
+display: block;
+height: 620px;
+width: 1100px;
+position: absolute;
+right: 50%;
+margin-right: -550px;
+}
+
+/*.closeCardsButton {
+left: 460px !important;
+font-size: 24px !important;
+top: 530px !important;
+position: absolute !important;
+}*/
+#cardSet1{
+	transform: rotate(-2deg) ;
+	-webkit-transform: rotate(-2deg) ;
+left: 20px !important;
+}
+#cardSet2{
+	transform: rotate(2deg) !important;
+	-webkit-transform: rotate(2deg) !important;
+top: 50px !important;
+}
+#cardSet3{
+	transform: rotate(-2deg) !important;
+	-webkit-transform: rotate(-2deg) !important;
+}
+</style>
+</head>
+<body >
+<a class="closeStage" onClick="closeStage();"> X </a>
+
+<div class="fullPageContent"> <script type="text/javascript">
+
+
+pickOne = true;
+//fadeInPosters();
+cardsFlipped = 0;
+
+//showPerson();
+//alert(playerCareer.info.name);
+
+
+
+		
+	if(worldObject.firstHistoryBoard == false){		
+	popMessageHistoryBoard();
+	worldObject.firstHistoryBoard = true;
+	saveAll(false);
+	}
+
+</script>
+		<div class="fullPageTitle">History Board</div>
+				
+
+		<div class="historyBoard"><a href="#" onClick="greenShore.closePopup();closeDeckSafe();testVisibility(locationArray);" class="closeCardsButton" >Close</a>
+				<div class="flip" id="cardSet1"  onClick="flipIt(1);">
+						<div class="rotate y"> 
+						
+						<a href="#"><img src="assets/img/posters/runecracker.jpg" alt="" width="330" height="460"></a>
+						
+						
+								<div class="cardSet1 "><div class='ch'></div><div class='cost'>  </div><div class='cardHeader'>Door Puzzles</div><div class='cardLocationImages'></div><div class='questDescription'>Some dungeons doors can be quite tricky to open. This is when you need a Rune Cracker - there are different kinds in the gear store in Hivre and other villages. They'll make the job of entering dungeons much simpler.</div> 
+								
+								</div>
+						
+						</div>
+				</div>
+				
+				<div  class="flip" id="cardSet2" onClick="flipIt(2);">
+						<div class="rotate y"> <a href="#"><img src="assets/img/posters/wytchwelcome.jpg" alt="" width="330" height="460"></a>
+								
+								<div class="cardSet2 "><div class='ch'></div><div class='cost'>  </div><div class='cardHeader'>Wytches Welcome</div><div class='cardLocationImages'></div><div class='questDescription'>In a land where the mayor is herself a Wytch (Wytchlin in Hivre) it's no surprise Wytches and their craft are so welcome in Koldemarsh. The area has also attracted Wytch Hunters, eager to prove their worth battling a wide variety of Wytches native to the area.</div>
+								</div>
+						
+						</div>
+				</div>
+				<div  class="flip" id="cardSet3" onClick="flipIt(3);">
+						<div class="rotate y"> <a href="#"><img src="assets/img/posters/nomore.jpg" alt="" width="330" height="460"></a>
+								
+								<div class="cardSet3 "><div class='ch'></div><div class='cost'>  </div><div class='cardHeader'>Death to Mortelle</div><div class='cardLocationImages'></div><div class='questDescription'>Few places in the Open Coast are as hostile to the Emperoro as Koldemarsh. His ruthless persecution of Wytchcraft and the burning of nearby villages to prevent plague have left this corner of the worl  breeding ground for anti-empyrialist factions like the Assasina.</div>
+								</div>
+						
+						</div>
+				</div>
+		</div>
+</div>
+<!--<a href="#"  class='closePlain' style="margin-top:60px" onClick="greenShore.closePopup();closeFullPage();">Done</a>-->
+
+</body>
+</html>
